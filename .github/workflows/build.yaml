@@ -1,7 +1,12 @@
 name: Build and Run Clippy
 
 on:
-  workflow_dispatch:
+    push:
+      branches:
+        - main
+    pull_request:
+      branches:
+        - main
 
 jobs:
   build-and-clippy:
