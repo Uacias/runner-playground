@@ -1,0 +1,26 @@
+name: Run Clippy
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  clippy-check:
+    # Ustawienie na runner scale set
+    runs-on: arc-runner-set
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Install Rust
+      uses: actions-rs/toolchain@v1
+      with:
+        toolchain: stable
+
+    - name: Run Clippy
+      run: cargo clippy -- -D warnings
