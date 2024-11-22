@@ -1,12 +1,12 @@
 name: Build and Run Clippy
 
 on:
-    push:
-      branches:
-        - main
-    pull_request:
-      branches:
-        - main
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
 
 jobs:
   build-and-clippy:
@@ -27,6 +27,11 @@ jobs:
 
       - name: Run build
         run: cargo build --release
+
+      - name: Artificial delay
+        run: |
+          echo "Adding artificial delay to simulate longer workflow..."
+          sleep 180 
 
       - name: Run Clippy
         run: cargo clippy -- -D warnings
