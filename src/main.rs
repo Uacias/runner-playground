@@ -1,4 +1,4 @@
 fn main() {
     println!("Hello, world!");
-    println!("Dead beef!")
+    println!("0xDeadbeef");
 }
