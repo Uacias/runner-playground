@@ -1,3 +1,7 @@
 fn main() {
-    println!("0xdeadbeexdx");
+    test();
+}
+
+fn test() {
+    println!("test");
 }
