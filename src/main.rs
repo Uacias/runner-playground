@@ -3,5 +3,5 @@ fn main() {
 }
 
 fn test() {
-    println!("test");
+    println!("test1");
 }
